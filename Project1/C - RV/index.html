@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Car Details - FK Cars</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img class="logo-icon-photo" src="../materials/logo.jpeg" alt="Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>FK CARS</h1>
+                        <span>SLOGAN HERE</span>
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <a href="#" class="icon-link">
+                        <img class="imgofheader" src="../materials/cart.png" alt="Cart">
+                    </a>
+                    <a href="#" class="icon-link">
+                        <img class="imgofheader" src="../materials/Control Panel.png" alt="Panel">
+                    </a>
+                    <a href="#" class="icon-link">
+                        <img class="imgofheader" src="../materials/user-cart.png" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="car-details-page">
+        <div class="car-details-container">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Cars
+            </a>
+
+            <div class="car-main-wrapper">
+                <div class="car-photos-section">
+                    <div class="main-photo">
+                        <img id="mainPhoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLSYrmETvlwhG7jRQX8w0y1KDCY5Xi3h-E_885XteFxw&s=10" alt="Car">
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumbnail-item"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBn--Dq2XgouGBwiGBkqhvf9aGdrZ2XkFybB3ifBA1dA&s=10" alt="Photo 1">
+                        </div>
+                        <div class="thumbnail-item" onclick="changePhoto(this)">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmlu4q_8W4paqDKXlrDaN_U-GlCmDCooO6sy-b-1eTg&s" alt="Photo 2">
+                        </div>
+                        <div class="thumbnail-item" onclick="changePhoto(this)">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTU8E6tO70bTyvVXWnJLnGbMV-IpkvLI4hV4Hj0KFoEw&s=10" alt="Photo 3">
+                        </div>
+                        <div class="thumbnail-item" onclick="changePhoto(this)">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdNKIzj5Go3AWmiE3hTGkAydi8ziHJY-Ez5UkQifshmQ&s=10" alt="Photo 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-info-section">
+                    <div class="car-title-block">
+                        <h1 class="car-title">CR - V</h1>
+                        <p class="car-subtitle">Hypercar</p>
+                        <div class="car-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(35 reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="car-specs-block">
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <div><span class="spec-label">Fuel</span><span class="spec-value">90L</span></div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cog"></i>
+                            <div><span class="spec-label">Transmission</span><span class="spec-value">Manual</span></div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-user-friends"></i>
+                            <div><span class="spec-label">Capacity</span><span class="spec-value">4 People</span></div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div><span class="spec-label">Mileage</span><span class="spec-value">15,000 km</span></div>
+                        </div>
+                    </div>
+
+                    <div class="car-description-block">
+                        <h3 class="desc-title">Description</h3>
+                        <p class="desc-text">The Honda CR-V stands as one of the world's most beloved compact SUVs — a proven champion of versatility, reliability, and everyday excellence. For over two decades, the CR-V has set the benchmark in its class, winning the hearts of millions of drivers worldwide with its perfect balance of practicality, comfort, and Honda's legendary engineering quality.</p>
+                    </div>
+
+                    <div class="purchase-block">
+                        <div class="price-block">
+                            <div class="price-wrapper">
+                                <span class="price-label">Price</span>
+                                <span class="price-value">$80К</span>
+                            </div>
+                            <div class="price-old">$100К</div>
+                        </div>
+                        <div class="quantity-block">
+                            <span class="quantity-label">Quantity</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" id="qtyMinus">-</button>
+                                <span class="qty-value" id="qtyValue">1</span>
+                                <button class="qty-btn" id="qtyPlus">+</button>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </button>
+                        <button class="add-wishlist-btn">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="modal" id="buyModal">
+    <div class="modal-content">
+        <h2>Подтверждение покупки</h2>
+
+        <p>
+            Вы действительно хотите купить
+            <strong>Honda CR-V</strong>?
+        </p>
+
+        <div class="modal-buttons">
+            <button id="cancelBtn">Отмена</button>
+            <button id="confirmBtn">Подтвердить</button>
+        </div>
+    </div>
+</div>
+<script src="basic.js"></script>
+</body>
+</html>
